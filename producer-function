@@ -11,6 +11,5 @@ def getCelebrityInfo(request):
         "celebrityName": "hello world",
         "content": "hellow"
     }
-    print("hello world")
 
     return make_response(json.dumps(response), 200, {'Content-Type': 'application/json'})
