@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/CelebrityName', methods=['GET'])
 def getCelebrityInfo(request):
-    
+    print("hello world")
     response = {
         "celebrityName": "hello world",
         "content": "hellow"
