@@ -1,15 +1,10 @@
-from flask import Flask, request, make_response
-import json
+from flask import Flask
 
 app = Flask(__name__)
 
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
 
-@app.route('/CelebrityName', methods=['GET'])
-def getCelebrityInfo(request):
-    print("hello world")
-    response = {
-        "celebrityName": "hello world",
-        "content": "hellow"
-    }
-
-    return make_response(json.dumps(response), 200, {'Content-Type': 'application/json'})
+if __name__ == '__main__':
+    app.run(debug=True)
